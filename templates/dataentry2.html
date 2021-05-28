@@ -1,0 +1,340 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <h3 class="text-dark mb-4">Vehicle Details</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col">
+                <div class="card shadow mb-3">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Vehicle Settings</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- <form method="POST" enctype="multipart/form-data"> -->
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Vehicle_Type_label"><Strong>Vehicle Type</Strong></label>
+                                    <select name="vehicleType" class="form-control">
+                                        <option value=""></option>
+                                        <option value="Car">Car</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Brand_Type_label"><Strong>Brand</Strong></label>
+                                    <select name="vehicleBrand" class="form-control">
+                                        <option value=""></option>
+                                        <option value="honda">honda</option>
+                                        <option value="toyota">toyota</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="VehicleModel_Type_label"><Strong>Vehicle Model</Strong></label>
+                                    <select name="vehicleModel" class="form-control">
+                                        <option value=""></option>
+                                        <option value="Amaze">Amaze</option>
+                                        <option value="city">City</option>
+                                        <option value="fortuner">Fortuner</option>
+                                        <option value="jazz">Jazz</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Engine_Type_label"><Strong>Engine Type</Strong></label>
+                                    <select name="engineType" class="form-control">
+                                        <option value=""></option>
+                                        <option value="diesel">diesel</option>
+                                        <option value="petrol">petrol</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Make_year_Type_label"><Strong>Make Year</Strong></label>
+                                    <select name="makeYear" class="form-control">
+                                        <option value=""></option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Region_Type_label"><Strong>Region</Strong></label>
+                                    <select name="region" class="form-control">
+                                        <option value=""></option>
+                                        <option value="chennai">Chennai</option>
+                                        <option value="mumbai">Mumbai</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Start: Inline Dropdown -->
+                                    <label name="Milage_range_Type_label"><Strong>Milage range</Strong></label>
+                                    <select name="mileage_range" class="form-control">
+                                        <option value=""></option>
+                                        <option value="10000">10000</option>
+                                        <option value="20000">20000</option>
+                                        <option value="30000">30000</option>
+                                        <option value="40000">40000</option>
+                                        <option value="50000">50000</option>
+                                        <option value="60000">60000</option>
+                                        <option value="70000">70000</option>
+                                        <option value="80000">80000</option>
+                                        <option value="90000">90000</option>
+                                        <option value="100000">100000</option>
+                                    </select>
+                                    <!-- End: Inline Dropdown -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label for="Mileage"><strong>Mileage</strong>
+                                    </label><input class="form-control" type="text" id="Mileage" placeholder="XXXX"
+                                        name="Mileage" required="true"></div>
+                            </div>
+                            <div class="col">
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                            <div class="col">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Oil Filter</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-1"
+                                                        name="formCheck-1"><label class="custom-control-label"
+                                                        for="formCheck-1"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>washer plug drain</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-3"
+                                                        name="formCheck-3"><label class="custom-control-label"
+                                                        for="formCheck-3"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Wheel alignment and balance</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-5"
+                                                        name="formCheck-5"><label class="custom-control-label"
+                                                        for="formCheck-5"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Fuel filter</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-7"
+                                                        name="formCheck-7"><label class="custom-control-label"
+                                                        for="formCheck-7"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Break fluid</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-9"
+                                                        name="formCheck-9"><label class="custom-control-label"
+                                                        for="formCheck-9"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Transmission Fluid</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-11"
+                                                        name="formCheck-11"><label class="custom-control-label"
+                                                        for="formCheck-11"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>clutch</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-13"
+                                                        name="formCheck-13"><label class="custom-control-label"
+                                                        for="formCheck-13"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                            <div class="col">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Engine Oil</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-2"
+                                                        name="formCheck-2"><label class="custom-control-label"
+                                                        for="formCheck-2"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Dust and pollen filter</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-4"
+                                                        name="formCheck-4"><label class="custom-control-label"
+                                                        for="formCheck-4"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Air clean filter</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-6"
+                                                        name="formCheck-6"><label class="custom-control-label"
+                                                        for="formCheck-6"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Spark plug</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-8"
+                                                        name="formCheck-8"><label class="custom-control-label"
+                                                        for="formCheck-8"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Break and Clutch oil</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-10"
+                                                        name="formCheck-10"><label class="custom-control-label"
+                                                        for="formCheck-10"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Break Pads</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-12"
+                                                        name="formCheck-12"><label class="custom-control-label"
+                                                        for="formCheck-12"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Coolant</strong></h6>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input value= 1
+                                                        class="custom-control-input" type="checkbox" id="formCheck-14"
+                                                        name="formCheck-14"><label class="custom-control-label"
+                                                        for="formCheck-14"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-sm" type="submit" name="VehicleDetails"
+                                value="1">Submit</button>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-0">
+                <div class="card mb-3">
+                    <div class="card-body text-center shadow">
+                        Vehicle Image
+                        <!-- <img class="mb-3 mt-1" src="" width="100%" height="200" id="imgPrime" /> -->
+                        <div class="mb-1">
+                            <!-- <form method="post" enctype="multipart/form-data"> -->
+                            <div class="file btn btn-primary btn-sm"
+                                style="position: relative; overflow: hidden; height:30px; width:109px">
+                                Upload
+                                <input type="file" name="file" id="fileUpload"
+                                    style="position: absolute; opacity: 0;right: 0;top: 0;" />
+                            </div>
+                            <!-- <input class="btn btn-primary btn-sm" type='submit' value='change photo' name='but_upload' /> -->
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
